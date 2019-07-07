@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="junqiangni">
 <meta property="og:description" content="hexo+github">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-07-07T08:54:08.247Z">
+<meta property="og:updated_time" content="2019-07-07T09:05:38.701Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用hexo+github搭建个人博客">
 <meta name="twitter:description" content="hexo+github">
@@ -197,16 +197,14 @@
 <p>新建一篇文章。如果没有设置 <code>layout</code> 的话，默认使用 <a href="https://hexo.io/zh-cn/docs/configuration" target="_blank" rel="noopener">_config.yml</a> 中的 <code>default_layout</code> 参数代替。如果标题包含空格的话，请使用引号括起来。</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> hexo new "post title with whitespace"</span><br></pre></td></tr></table></figure>
 
+<p>内容格式            </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: postName #文章页面上的显示名称，可以任意修改，不会出现在URL中</span><br><span class="line">date: 2019-06-30 21:30:16 #文章生成时间，一般不改，当然也可以任意修改categories: #文章分类目录，可以为空，注意:后面有个空格</span><br><span class="line">tags: #文章标签，可空，多标签请用格式[tag1,tag2,tag3]，注意:后面有个空格</span><br><span class="line">---</span><br><span class="line">这里开始使用markdown格式输入你的正文。</span><br></pre></td></tr></table></figure>
+
 <blockquote>
 <p>1.生成指定名称的文章至<em>hexo\source_posts\postName.md</em>。或直接在source_posts中写文档（注意格式）</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span> ---</span><br><span class="line"><span class="meta">&gt;</span> title: postName #文章页面上的显示名称，可以任意修改，不会出现在URL中</span><br><span class="line"><span class="meta">&gt;</span> date: 2013-12-02 15:30:16 #文章生成时间，一般不改，当然也可以任意修改categories: #文章分类目录，可以为空，注意:后面有个空格</span><br><span class="line"><span class="meta">&gt;</span> tags: #文章标签，可空，多标签请用格式[tag1,tag2,tag3]，注意:后面有个空格</span><br><span class="line"><span class="meta">&gt;</span> ---</span><br><span class="line"><span class="meta">&gt;</span> 这里开始使用markdown格式输入你的正文。</span><br><span class="line"><span class="meta">&gt;</span> </span><br><span class="line"><span class="meta">&gt;</span></span><br></pre></td></tr></table></figure>
-</blockquote>
-<blockquote>
 <p>2.写博客工具 <a href="https://www.typora.io/" target="_blank" rel="noopener">Typora网站</a>  <a href="https://www.typora.io/windows/typora-setup-x64.exe?" target="_blank" rel="noopener">下载</a></p>
 <p>3.博文列表不显示全部内容</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span> 在合适的位置加上&lt;!--more--&gt; 即可</span><br><span class="line"><span class="meta">&gt;</span></span><br></pre></td></tr></table></figure>
-</blockquote>
-<blockquote>
+<p>​    在合适的位置加上<!--more--> 即可</p>
 </blockquote>
 <h6 id="generate"><a href="#generate" class="headerlink" title="generate"></a>generate</h6><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> hexo generate</span><br></pre></td></tr></table></figure>
 
