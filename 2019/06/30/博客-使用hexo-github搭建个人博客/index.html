@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="junqiangni">
 <meta property="og:description" content="hexo+github">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-07-07T08:48:10.884Z">
+<meta property="og:updated_time" content="2019-07-07T08:54:08.247Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用hexo+github搭建个人博客">
 <meta name="twitter:description" content="hexo+github">
@@ -199,12 +199,12 @@
 
 <blockquote>
 <p>1.生成指定名称的文章至<em>hexo\source_posts\postName.md</em>。或直接在source_posts中写文档（注意格式）</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&gt; ---</span><br><span class="line">&gt; title: postName #文章页面上的显示名称，可以任意修改，不会出现在URL中</span><br><span class="line">&gt; date: 2013-12-02 15:30:16 #文章生成时间，一般不改，当然也可以任意修改categories: #文章分类目录，可以为空，注意:后面有个空格</span><br><span class="line">&gt; tags: #文章标签，可空，多标签请用格式[tag1,tag2,tag3]，注意:后面有个空格</span><br><span class="line">&gt; ---</span><br><span class="line">&gt; 这里开始使用markdown格式输入你的正文。</span><br><span class="line">&gt; </span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span> ---</span><br><span class="line"><span class="meta">&gt;</span> title: postName #文章页面上的显示名称，可以任意修改，不会出现在URL中</span><br><span class="line"><span class="meta">&gt;</span> date: 2013-12-02 15:30:16 #文章生成时间，一般不改，当然也可以任意修改categories: #文章分类目录，可以为空，注意:后面有个空格</span><br><span class="line"><span class="meta">&gt;</span> tags: #文章标签，可空，多标签请用格式[tag1,tag2,tag3]，注意:后面有个空格</span><br><span class="line"><span class="meta">&gt;</span> ---</span><br><span class="line"><span class="meta">&gt;</span> 这里开始使用markdown格式输入你的正文。</span><br><span class="line"><span class="meta">&gt;</span> </span><br><span class="line"><span class="meta">&gt;</span></span><br></pre></td></tr></table></figure>
 </blockquote>
 <blockquote>
 <p>2.写博客工具 <a href="https://www.typora.io/" target="_blank" rel="noopener">Typora网站</a>  <a href="https://www.typora.io/windows/typora-setup-x64.exe?" target="_blank" rel="noopener">下载</a></p>
 <p>3.博文列表不显示全部内容</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span> 在合适的位置加上&lt;!--more--&gt; 即可</span><br><span class="line"><span class="meta">&gt;</span> </span><br><span class="line"><span class="meta">&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span> 在合适的位置加上&lt;!--more--&gt; 即可</span><br><span class="line"><span class="meta">&gt;</span></span><br></pre></td></tr></table></figure>
 </blockquote>
 <blockquote>
 </blockquote>
@@ -269,10 +269,9 @@
 <p> 该命令可以简写为：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> hexo d</span><br></pre></td></tr></table></figure>
 
-<blockquote>
 <p>在开始之前，您必须先在 <code>_config.yml</code> 中修改参数，一个正确的部署配置中至少要有 <code>type</code> 参数，例如</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span>deploy:</span><br><span class="line"><span class="meta">&gt;</span>	type: git</span><br><span class="line"><span class="meta">&gt;</span> 	repository: git@github.com:yourusername/yourusername.github.io.git</span><br><span class="line"><span class="meta">&gt;</span> 	branch: master</span><br><span class="line"><span class="meta">&gt;</span></span><br></pre></td></tr></table></figure>
-</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">	type: git</span><br><span class="line">	repository: git@github.com:yourusername/yourusername.github.io.git</span><br><span class="line">	branch: master</span><br></pre></td></tr></table></figure>
+
 <h4 id="主题"><a href="#主题" class="headerlink" title="主题"></a><a href="https://hexo.io/zh-cn/docs/themes" target="_blank" rel="noopener">主题</a></h4><p>创建 Hexo 主题，将下载的Hexo主题放在Hexo/ <code>themes</code> 文件夹内(名称可以任意指定)</p>
 <p>并修改 <code>_config.yml</code>内的 <code>theme</code> 设定，即可切换主题。</p>
 <blockquote>
