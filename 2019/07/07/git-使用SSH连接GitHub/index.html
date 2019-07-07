@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://junqiangni.github.io">
-  <title>window环境使用hexo+github搭建个人博客 | junqiangni</title>
+  <title>Connecting to GitHub with SSH | junqiangni</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="hexo+github">
-<meta name="keywords" content="github,hexo,AppVeyor">
+  <meta name="description" content="使用 SSH 协议可以连接远程服务器和服务并向它们验证。 利用 SSH 密钥可以连接 GitHub，而无需在每次访问时提供用户名或密码。  使用的环境是windows 系统">
+<meta name="keywords" content="github,ssh">
 <meta property="og:type" content="article">
-<meta property="og:title" content="window环境使用hexo+github搭建个人博客">
-<meta property="og:url" content="https://junqiangni.github.io/2019/06/30/使用hexo-github搭建个人博客/index.html">
+<meta property="og:title" content="Connecting to GitHub with SSH">
+<meta property="og:url" content="https://junqiangni.github.io/2019/07/07/git-使用SSH连接GitHub/index.html">
 <meta property="og:site_name" content="junqiangni">
-<meta property="og:description" content="hexo+github">
+<meta property="og:description" content="使用 SSH 协议可以连接远程服务器和服务并向它们验证。 利用 SSH 密钥可以连接 GitHub，而无需在每次访问时提供用户名或密码。  使用的环境是windows 系统">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-07-07T04:30:41.906Z">
+<meta property="og:updated_time" content="2019-07-07T04:33:49.399Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="window环境使用hexo+github搭建个人博客">
-<meta name="twitter:description" content="hexo+github">
+<meta name="twitter:title" content="Connecting to GitHub with SSH">
+<meta name="twitter:description" content="使用 SSH 协议可以连接远程服务器和服务并向它们验证。 利用 SSH 密钥可以连接 GitHub，而无需在每次访问时提供用户名或密码。  使用的环境是windows 系统">
   
     <link rel="alternative" href="/atom.xml" title="junqiangni" type="application/atom+xml">
   
@@ -129,33 +129,95 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-使用hexo-github搭建个人博客" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-git-使用SSH连接GitHub" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      window环境使用hexo+github搭建个人博客
+      Connecting to GitHub with SSH
     </h1>
   
 
         
-        <a href="/2019/06/30/使用hexo-github搭建个人博客/" class="archive-article-date">
-  	<time datetime="2019-06-30T20:33:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-30</time>
+        <a href="/2019/07/07/git-使用SSH连接GitHub/" class="archive-article-date">
+  	<time datetime="2019-07-07T11:21:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-07</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="hexo参考"><a href="#hexo参考" class="headerlink" title="hexo参考"></a>hexo参考</h3><p>1<a href="https://www.cnblogs.com/zhcncn/p/4097881.html" target="_blank" rel="noopener">https://www.cnblogs.com/zhcncn/p/4097881.html</a></p>
-<p>2.hexo你的博客：<a href="http://ibruce.info/2013/11/22/hexo-your-blog/" target="_blank" rel="noopener">http://ibruce.info/2013/11/22/hexo-your-blog/</a></p>
-<p>3.<a href="https://www.cnblogs.com/liuxianan/p/build-blog-website-by-hexo-github.html" target="_blank" rel="noopener">https://www.cnblogs.com/liuxianan/p/build-blog-website-by-hexo-github.html</a></p>
+        <p>使用 SSH 协议可以连接远程服务器和服务并向它们验证。 利用 SSH 密钥可以连接 GitHub，而无需在每次访问时提供用户名或密码。</p>
+<blockquote>
+<p>使用的环境是windows 系统 </p>
+</blockquote>
 <a id="more"></a>
 
-<h3 id="持续化集成"><a href="#持续化集成" class="headerlink" title="持续化集成"></a>持续化集成</h3><p>1.<a href="https://formulahendry.github.io/2016/12/04/hexo-ci/#more" target="_blank" rel="noopener">https://formulahendry.github.io/2016/12/04/hexo-ci/#more</a></p>
-<p>2.<a href="https://segmentfault.com/a/1190000015648687?utm_source=tag-newest" target="_blank" rel="noopener">https://segmentfault.com/a/1190000015648687?utm_source=tag-newest</a></p>
+<h3 id="配置你的用户名和邮箱"><a href="#配置你的用户名和邮箱" class="headerlink" title="配置你的用户名和邮箱"></a>配置你的用户名和邮箱</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.email "your.email@**" 填写你的github注册邮箱</span><br><span class="line">git config --global user.name "yourgithubnname" //你的github用户名，非昵称</span><br></pre></td></tr></table></figure>
+
+<h3 id="检查存在的SSH-keys"><a href="#检查存在的SSH-keys" class="headerlink" title="检查存在的SSH keys"></a>检查存在的SSH keys</h3><ul>
+<li><p>在Git bash 中 输入<code>ls -al ~/.ssh</code> 以查看是否存在现有 SSH </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls -al ~/.ssh</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>检查目录列表以查看是否已经有 SSH 公钥。</p>
+<blockquote>
+<p>默认情况下，公钥的文件名是以下之一：</p>
+<ul>
+<li><em>id_dsa.pub</em></li>
+<li><em>id_ecdsa.pub</em></li>
+<li><em>id_ed25519.pub</em></li>
+<li><em>id_rsa.pub</em></li>
+</ul>
+</blockquote>
+</li>
+</ul>
+<h3 id="生成一个新的SSH-key"><a href="#生成一个新的SSH-key" class="headerlink" title="生成一个新的SSH key"></a>生成一个新的SSH key</h3><ul>
+<li><p>在Git bash 输入 下面命令，<a href="mailto:your_email@example.com" target="_blank" rel="noopener">your_email@example.com</a>替换为有的GitHub 邮箱</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> ssh-keygen -t rsa -b 4096 -C "your_email@example.com"</span><br><span class="line">  Generating public/private rsa key pair.</span><br><span class="line">  Enter file in which to save the key (C:\Users\Administrator/.ssh/id_rsa):</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<blockquote>
+<p>在自定义key的位置时，选择默认即可（C:\Users\Administrator/.ssh/id_rsa）</p>
+<p>这里的没有使用<a href="https://help.github.com/en/articles/working-with-ssh-key-passphrases" target="_blank" rel="noopener">SSH key passphrases</a>  直接回车即可</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span> Enter passphrase (empty for no passphrase): [Type a passphrase]</span><br><span class="line"><span class="meta">&gt;</span> Enter same passphrase again: [Type passphrase again]</span><br><span class="line"><span class="meta">&gt;</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+<blockquote>
+<p>使用SSH密钥，如果有人获得对您计算机的访问权限，他们也可以访问使用该密钥的每个系统。要添加额外的安全层，可以向SSH密钥添加密码。您可以使用它<code>ssh-agent</code>来安全地保存您的密码，这样您就不必重新输入密码。<a href="https://help.github.com/en/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent" target="_blank" rel="noopener">Adding your SSH key to the ssh-agent</a></p>
+</blockquote>
+<h3 id="将SSH-key-添加到Github-账户中"><a href="#将SSH-key-添加到Github-账户中" class="headerlink" title="将SSH key 添加到Github 账户中"></a>将SSH key 添加到Github 账户中</h3><ul>
+<li><p>将SSH密钥复制到剪贴板</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> clip &lt; ~/.ssh/id_rsa.pub # Copies the contents of the id_rsa.pub file to your clipboard</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>如果<code>clip</code>不起作用，您可以找到隐藏<code>.ssh</code>文（C:\Users\Administrator/.ssh/id_rsa)</p>
+<p>复制id_rsa.pub中的内容即可</p>
+</blockquote>
+</li>
+<li><p>在你的Github 页面的右上角，点击个人头像，然后点击 Settings</p>
+</li>
+<li><p>在用户设置中（Personal settings），点击SSH and GPG keys</p>
+</li>
+<li><p>点击 New SSH key or Add SSH key</p>
+</li>
+<li><p>在Title 字段中，为新密钥添加描述性标签，将密钥粘贴到key 字段中</p>
+</li>
+<li><p>,点击添加，如何有提示，输入你的GitHub 密码</p>
+</li>
+</ul>
+<h3 id="测试连接"><a href="#测试连接" class="headerlink" title="测试连接"></a>测试连接</h3><ul>
+<li><p>在Git Bash 中输入</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> ssh -T git@github.com # Attempts to ssh to GitHub</span><br><span class="line">Hi junqiangni! You've successfully authenticated, but GitHub does not provide shell access.</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<blockquote>
+<p>如果出现警告，按照提示输入，即可</p>
+<p>如果是 permission denied 信息 <a href="https://help.github.com/en/articles/error-permission-denied-publickey" target="_blank" rel="noopener">Error: Permission denied (publickey)</a>.</p>
+</blockquote>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p>1.<a href="https://help.github.com/en/articles/connecting-to-github-with-ssh" target="_blank" rel="noopener">https://help.github.com/en/articles/connecting-to-github-with-ssh</a></p>
 
       
 
@@ -173,11 +235,7 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">AppVeyor</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ssh</a>
         		</li>
       		
 		</ul>
@@ -189,7 +247,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/博客//" class="article-tag-list-link color3">博客</a>
+        			<a href="/categories/GitHub//" class="article-tag-list-link color2">GitHub</a>
         		</li>
       		
 		</ul>
@@ -244,7 +302,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://junqiangni.github.io/2019/06/30/使用hexo-github搭建个人博客/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://junqiangni.github.io/2019/07/07/git-使用SSH连接GitHub/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -258,15 +316,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/07/07/使用SSH连接GitHub/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Connecting to GitHub with SSH
-        
-      </div>
-    </a>
   
+    <a href="/2019/06/30/博客-使用hexo-github搭建个人博客/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">window环境使用hexo+github搭建个人博客</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
